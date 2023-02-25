@@ -1,0 +1,77 @@
+<%- include('../partials/header') %>
+<div class="container-fluid">
+  <div class="card mt-5 mb-4">
+    <div class="card-header text-center p-3"><h3>A League Standings</h3></div>
+    <div class="card-body">
+      <table class="table table-striped text-center">
+        <thead>
+          <tr>
+            <th>Place</th>
+            <th>Points</th>
+            <th>Record</th>
+            <th>Team Name</th>
+            <th>Leg Won %</th>
+            <th>01 Game Avg</th>
+            <th>Cricket Avg</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% standings.forEach((team) => { %>
+          <tr>
+            <td><%= team.place %></td>
+            <td><%= team.points %></td>
+            <td>
+              <%= team.matchesWon %> - <%= team.matchesPlayed - team.matchesWon
+              %>
+            </td>
+            <td><%= team.teamName %></td>
+            <td><%= team.legWonPct %></td>
+            <td><%= team.legWonPct %></td>
+            <td><%= team.zeroOneAvg %></td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="card mt-5 mb-4">
+    <div class="card-header text-center p-3"><h3>Player Standings</h3></div>
+    <div class="card-body">
+      <table class="table table-striped text-center">
+        <thead>
+          <tr>
+            <th>Place</th>
+            <th>Player</th>
+            <th title="3 Dart Average">3DA</th>
+            <th title="First 9 Average">F9A</th>
+            <th title="Average Finish">AF</th>
+            <th>100+</th>
+            <th>140+</th>
+            <th>180</th>
+            <th title="Matches Played">MP</th>
+            <th title="Legs Played">Legs</th>
+            <th title="Leg Win %">LW %</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% playerAStandings.forEach((player) => { %>
+          <tr>
+            <td><%= player.place %></td>
+            <td><%= player.playerName %></td>
+            <td><%= player.threeDA %></td>
+            <td><%= player.firstNineAvg %></td>
+            <td><%= player.avgFin %></td>
+            <td><%= player.tonPlus %></td>
+            <td><%= player.tonFourPlus %></td>
+            <td><%= player.tonEighty %></td>
+            <td><%= player.matches %></td>
+            <td><%= player.legs %></td>
+            <td><%= player.legWinPct %></td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<%- include('../partials/footer') %>
