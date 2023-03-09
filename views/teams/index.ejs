@@ -1,0 +1,57 @@
+<%- include('../partials/header') %>
+<div class="container-fluid" style="height: 73vh">
+  <div class="row mt-4 mb-4">
+    <div class="col">
+      <div class="card">
+        <div class="card-header text-center"><h3>A League Teams</h3></div>
+        <table class="table table-striped text-center">
+          <thead>
+            <tr>
+              <th>Team Name</th>
+              <th>Venue</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% teams.forEach((team) => { %>
+            <!-- // -->
+            <% if(team.league === 'A') { %>
+            <tr>
+              <td><a href="/teams/<%= team._id %>"><%= team.name %></a></td>
+              <td><%= team.venue %></td>
+              <% } %>
+              <!-- .. -->
+            </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <div class="card-header text-center"><h3>B League Teams</h3>></div>
+      <table class="table table-striped text-center">
+        <thead>
+          <tr>
+            <th>Team Name</th>
+            <th>Venue</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% teams.forEach((team) => { %>
+          <!-- // -->
+          <% if(team.league === 'B') { %>
+          <tr>
+            <td><a href="/teams/<%= team._id %>"><%= team.name %></a></td>
+            <td><%= team.venue %></td>
+            <% } %>
+            <!-- .. -->
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  </div>
+  </div>
+</div>
+<%- include('../partials/footer') %>

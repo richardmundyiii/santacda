@@ -1,0 +1,24 @@
+<%- include('../partials/header') %>
+<div class="container mt-4 mb-4">
+  <h1 class="text-center"><%= team.name %></h1>
+  <div class="card">
+    <table class="table table striped text-center">
+      <thead>
+        <tr>
+          <th>Player Name</th>
+          <th>Legs Won</th>
+          <th>'01 Avg</th>
+          <th>Crk Avg</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% players.forEach((p) => { %>
+        <tr>
+          <td><%= p.name %></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</div>
+<%- include('../partials/footer') %>
