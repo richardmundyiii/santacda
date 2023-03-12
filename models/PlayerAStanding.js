@@ -11,45 +11,46 @@ const playerAStandingSchema = new Schema(
       type: String,
       require: true,
     },
-    threeDA: {
+    wins: {
       type: Number,
       require: true,
     },
-    firstNineAvg: {
+    lossess: {
       type: Number,
       require: true,
     },
-    avgFin: {
-      type: String,
-      require: true,
+    nineFive: {
+      type: Number,
     },
-    tonPlus: {
-      type: String,
-      require: true,
+    ton: {
+      type: Number,
     },
-    tonFourPlus: {
-      type: String,
-      require: true,
+    tonFourty: {
+      type: Number,
     },
     tonEighty: {
-      type: String,
-      require: true,
-    },
-    matches: {
       type: Number,
-      require: true,
     },
-    legs: {
+    numHighlights: {
       type: Number,
-      require: true,
     },
-    legWinPct: {
-      type: String,
-      require: true,
+    totalHighPoints: {
+      type: Number,
     },
-    league: {
-      type: String,
-      require: true,
+    fiveMark: {
+      type: Number,
+    },
+    sixMark: {
+      type: Number,
+    },
+    sevenMark: {
+      type: Number,
+    },
+    eightMark: {
+      type: Number,
+    },
+    nineMark: {
+      type: Number,
     },
   },
   {

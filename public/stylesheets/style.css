@@ -3,9 +3,17 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   padding: 0px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-image: url("/images/coolbg.png");
+}
+
+.container {
+  height: 75vh;
+  display: flex;
+  align-items: center;
 }
 
 a {
